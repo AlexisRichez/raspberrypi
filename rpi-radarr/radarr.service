@@ -5,8 +5,8 @@ Requires=nzbget.service
 StartLimitIntervalSec=0
  
 [Service]
-User=dluser
-Group=dluser
+User=radarr
+Group=radarr
  
 Type=simple
  

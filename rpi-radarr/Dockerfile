@@ -1,5 +1,5 @@
 # Fetch base image
-FROM raspbian:stretch
+FROM debian:buster-slim
 # Update packages
 RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl systemd
 

@@ -1,7 +1,7 @@
 # Fetch base image
 FROM debian:stretch
 # Update packages
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 
 # Install Radarr
 RUN adduser --system $DLDUSER --group --home /opt/downloaders

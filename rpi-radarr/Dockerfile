@@ -19,5 +19,5 @@ RUN mv /opt/downloaders/Radarr /opt/downloaders/radarr
 RUN chown -R radarr:radarr /opt/downloaders/radarr
 COPY radarr.service /etc/systemd/system/radarr.service
 
-RUN /usr/bin/mono /opt/downloaders/radarr/Radarr.exe -nobrowser -data=/opt/downloaders.conf/radarr
+CMD /usr/bin/mono /opt/downloaders/radarr/Radarr.exe -nobrowser -data=/opt/downloaders.conf/radarr
 EXPOSE 7878

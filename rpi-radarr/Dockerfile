@@ -1,7 +1,7 @@
 # Fetch base image
 FROM debian:stretch
 # Update packages
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl
 
 # Install Radarr
 RUN mkdir /opt/downloaders

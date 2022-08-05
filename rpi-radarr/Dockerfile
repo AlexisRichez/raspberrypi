@@ -11,4 +11,4 @@ RUN curl -sL "http://radarr.servarr.com/v1/update/master/updatefile?os=linux&run
 RUN tar xvzf /tmp/Radarr.tgz -C /opt/downloaders/
 RUN mv /opt/downloaders/Radarr /opt/downloaders/radarr
 RUN chown -R dluser:dluser /opt/downloaders/radarr
-COPY radarr.service /etc/systemd/system/radarr.service
+#COPY radarr.service /etc/systemd/system/radarr.service

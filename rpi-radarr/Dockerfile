@@ -18,5 +18,7 @@ RUN tar xvzf /tmp/Radarr.tgz -C /opt/downloaders/
 RUN mv /opt/downloaders/Radarr /opt/downloaders/radarr
 RUN chown -R radarr:radarr /opt/downloaders/radarr
 
+RUN mkdir /media/NAS
+
 CMD /usr/bin/mono /opt/downloaders/radarr/Radarr.exe -nobrowser -data=/opt/downloaders.conf/radarr
 EXPOSE 7878

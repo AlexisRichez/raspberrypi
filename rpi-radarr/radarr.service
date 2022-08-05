@@ -10,7 +10,7 @@ Group=dluser
  
 Type=simple
  
-ExecStart=/opt/downloaders/radarr/Radarr -nobrowser -data=/opt/downloaders.conf/radarr
+ExecStart=/usr/bin/mono /opt/downloaders/radarr/Radarr.exe -nobrowser -data=/opt/downloaders.conf/radarr
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure

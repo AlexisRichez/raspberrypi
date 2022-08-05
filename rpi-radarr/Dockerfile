@@ -2,7 +2,7 @@
 FROM mono:latest
 
 # Update packages
-RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl
+RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl systemd
 
 # Install Radarr
 RUN mkdir /opt/downloaders
@@ -12,4 +12,4 @@ RUN tar xvzf /tmp/Radarr.tgz -C /opt/downloaders/
 RUN mv /opt/downloaders/Radarr /opt/downloaders/radarr
 RUN chown -R dluser:dluser /opt/downloaders/radarr
 COPY radarr.service /etc/systemd/system/radarr.service
-RUN service radarr.service start
+RUN systemctl enable radarr.service

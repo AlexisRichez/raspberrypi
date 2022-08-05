@@ -1,7 +1,7 @@
 # Fetch base image
 FROM debian:stretch
 # Update packages
-RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl
+RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl gnupg gnupg2 gnupg1 
 
 # Install Mono
 RUN apt-get update -q

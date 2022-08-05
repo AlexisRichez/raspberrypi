@@ -11,10 +11,10 @@ RUN apt-get install -yqq mono-complete
 
 # Install Radarr
 RUN mkdir /opt/downloaders
-RUN useradd -d /opt/downloaders dluser
+RUN useradd -d /opt/downloaders radarr
 
 RUN curl -sL "https://github.com/Radarr/Radarr/releases/download/v3.2.2.5080/Radarr.master.3.2.2.5080.linux.tar.gz" -o /tmp/Radarr.tgz
 RUN tar xvzf /tmp/Radarr.tgz -C /opt/downloaders/
 RUN mv /opt/downloaders/Radarr /opt/downloaders/radarr
-RUN chown -R dluser:dluser /opt/downloaders/radarr
+RUN chown -R radarr:radarr /opt/downloaders/radarr
 COPY radarr.service /etc/systemd/system/radarr.service

@@ -1,6 +1,5 @@
 # Fetch base image
-FROM mono:latest
-
+FROM debian:latest
 # Update packages
 #RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl systemd
 

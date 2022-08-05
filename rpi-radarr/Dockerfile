@@ -1,5 +1,5 @@
 # Fetch base image
-FROM debian:latest
+FROM raspbian:stretch
 # Update packages
 RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl systemd
 

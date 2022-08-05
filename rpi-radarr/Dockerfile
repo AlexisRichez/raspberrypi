@@ -1,7 +1,7 @@
 # Fetch base image
 FROM debian:latest
 # Update packages
-#RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl systemd
+RUN apt-get update && apt-get upgrade -y && apt-get install -yqq curl systemd
 
 # Install Radarr
 #RUN mkdir /opt/downloaders

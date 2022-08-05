@@ -4,6 +4,7 @@ FROM debian:stretch
 RUN apt-get update && apt-get upgrade -y
 
 # Install Radarr
+RUN mkdir /opt/downloaders
 RUN adduser --system $DLDUSER --group --home /opt/downloaders
 RUN curl -sL "https://radarr.servarr.com/v1/update/nightly/updatefile?os=linux&runtime=netcore&arch=arm64" -o /tmp/Radarr.tgz
 RUN tar xvzf /tmp/Radarr.tgz -C /opt/downloaders/

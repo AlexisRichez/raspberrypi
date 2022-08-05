@@ -18,3 +18,5 @@ RUN tar xvzf /tmp/Radarr.tgz -C /opt/downloaders/
 RUN mv /opt/downloaders/Radarr /opt/downloaders/radarr
 RUN chown -R radarr:radarr /opt/downloaders/radarr
 COPY radarr.service /etc/systemd/system/radarr.service
+
+RUN systemctl enable --now radarr.service

@@ -4,6 +4,12 @@ apt-get upgrade
 
 echo "Install Radarr..."
 mkdir /opt/radarr/data
-docker pull linuxserver/radarr
+docker pull rafaelncarvalho/rpi-radarr
 
-docker run -d --name=radarr -e TZ=Europe/London -p 7878:7878 -v /opt/radarr/data:/config --restart unless-stopped lscr.io/linuxserver/radarr:latest
+docker run -d -p 7878:7878 \
+-v /media/NAS/movies:/volumes/media \
+-v /opt/radarr/data:/volumes/config \
+-v /etc/localtime:/etc/localtime:ro \
+--restart unless-stopped \
+--name radarr \
+rafaelncarvalho/rpi-radarr

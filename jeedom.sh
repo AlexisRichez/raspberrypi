@@ -1,5 +1,6 @@
 #!/bin/bash
 "Install Jeedom..."
+mkdir /opt/jeedom
 mkdir /opt/jeedom/www
 mkdir /opt/jeedom/db
 docker pull jeedom/jeedom:V4-stable

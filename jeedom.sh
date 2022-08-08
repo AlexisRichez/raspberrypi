@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "Install Jeedom..."
 mkdir /opt/jeedom
-mkdir /opt/jeedom/www
-mkdir /opt/jeedom/db
-docker pull jeedom/jeedom:V4-stable
-docker run --name jeedom-server -v /opt/jeedom/www:/var/www/html -v /opt/jeedom/db:/var/lib/mysql -p 9080:80 –restart always jeedom/jeedom:V4-stable
+mkdir /opt/jeedom/mysql
+
+docker run --name jeedom-mysql -v /opt/jeedom/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_USER=jeedom -e MYSQL_PASSWORD=jeedom --detach --publish 3306:3306 --restart always mariadb:10.1

@@ -1,5 +1,5 @@
 #!/bin/bash
-"Install Jeedom..."
+echo "Install Jeedom..."
 mkdir /opt/jeedom
 mkdir /opt/jeedom/www
 mkdir /opt/jeedom/db

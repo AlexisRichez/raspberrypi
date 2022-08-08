@@ -3,8 +3,7 @@ apt-get update
 apt-get upgrade
 
 echo "Install Docker..."
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+apt-get install docker
 usermod -aG docker pi
 
 echo "Install Portainer (Visualizing Docker containers)..."

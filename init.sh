@@ -3,7 +3,7 @@ apt-get update
 apt-get upgrade
 
 echo "Install Docker..."
-apt-get install docker
+apt-get install y docker
 usermod -aG docker pi
 
 echo "Install Portainer (Visualizing Docker containers)..."
